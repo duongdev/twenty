@@ -2,6 +2,7 @@ services:
 - type: web
   name: server
   runtime: image
+  region: singapore
   image:
     url: twentycrm/twenty:latest
   dockerCommand: "sh -c ./scripts/render-run.sh"
@@ -39,6 +40,7 @@ services:
 - type: worker
   name: worker
   runtime: image
+  region: singapore
   image:
     url: twentycrm/twenty:latest
   dockerCommand: "sh -c ./scripts/render-worker.sh"
@@ -81,6 +83,7 @@ services:
   name: twenty_postgres
   plan: starter
   runtime: image
+  region: singapore
   image:
     url: twentycrm/twenty-postgres:latest
   autoDeploy: false
